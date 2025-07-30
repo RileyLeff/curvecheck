@@ -2,7 +2,7 @@ library(ggplot2)
 library(arrow)
 
 # licor parquet file
-path_to_read <- "/Users/rileyleff/Desktop/ilex_rapidaci.parquet"
+path_to_read <- "/Users/rileyleff/Desktop/2025-07-30-1639_logdata_ilex564_sun_aci_1.parquet"
 
 # convert to dataframe
 df <- arrow::read_parquet(path_to_read)
