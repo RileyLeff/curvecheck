@@ -1,0 +1,4 @@
+path_to_raw_data = "data/raw/real"
+path_to_processed_output = "data/converted"
+valid_folders = ["aci", "lr"]
+

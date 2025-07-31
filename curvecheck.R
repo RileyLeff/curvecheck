@@ -1,8 +1,19 @@
-library(ggplot2)
 library(arrow)
+library(RcppTOML)
+
+config <- RcppTOML::parseTOML("config.toml")
+folders_of_interest <- paste(config$path_to_data, config$valid_folders, sep = "/")
+
+x <- licorclient::file_to_dataframe(
+    "data/raw/real/aci/2025-07-30-1310_logdata_ilex812_sun_aci_3", 
+    "data.frame", 
+    "6800", 
+    "standard", 
+    FALSE
+)
 
 # licor parquet file
-path_to_read <- "/Users/rileyleff/Desktop/2025-07-30-1639_logdata_ilex564_sun_aci_1.parquet"
+path_to_read <- ""
 
 # convert to dataframe
 df <- arrow::read_parquet(path_to_read)
